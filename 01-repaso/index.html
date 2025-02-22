@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<!-- cabecera -->
+	<head>
+		<title>Primera Pagina Web</title>
+		<!-- metadatos -->
+		<!-- reglas CSS -->
+		<!-- Vinculos a archivos externos o internos(JS, CSS, ) -->
+		
+	</head>
+	<!-- fin cabecera -->
+
+	<!-- cuerpo -->
+	<body>
+		<h1>This is a Heading</h1>
+		<h2>This is a Heading</h2>
+		<h3>This is a Heading</h3>
+
+		<p>This is a paragraph.</p>
+
+		<button id="btnClick">Click</button>
+
+	</body>
+	<!-- fin cuerpo -->
+
+	<footer>
+		<p>Copyright 2025</p>
+	</footer>
+
+	<!-- Archivos que se cargan al final de la carga inicial de la pagina web -->
+	<script src="./js/funciones.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+	<script>
+		// jQuery
+		$("#btnClick").on("click", function() {
+			saludar(); // funcion definida en /js/funciones.js
+		})
+
+		$("p").hover(
+			function() {
+				$(this).css("background-color", "yellow");
+			},
+			function() {
+				$(this).css("background-color", "white");
+			}
+		)
+	</script>
+
+
+</html>
