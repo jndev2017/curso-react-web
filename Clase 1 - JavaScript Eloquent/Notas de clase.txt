@@ -1,0 +1,139 @@
+Impresión con formato:
+-----------------------
+
+> En lenguaje C:
+
+printf("%s %d", "oceano", 10);
+
+Salida: oceano 10
+
+>Similitud en JavaScript (usando template literals):
+
+console.log(`El valor de x es ${x}`);
+console.log(`El
+Linea 1
+Linea 2
+Linea 3
+`);
+
+Secuencias de escape:
+---------------------
+Son combinaciones de caracteres que comienzan con una barra invertida (\),  y se utilizan para representar caracteres especiales o para incluir caracteres que no se pueden escribir directamente en una cadena de texto.
+
+Salto de linea: "\n"
+Barra: "\\"
+Comilla doble: "\""
+Comilla simple: "\'"
+Retorno de carro: "\r"
+Tabulación horizontal: "\t"
+Tabulación vertical: "\v"
+
+Operadores de comparacion
+-------------------------
+
+>
+<
+<=
+>=
+==
+!=
+
+Operadores logicos:
+-------------------
+OR: exp1 || exp2
+AND: exp1 && exp2
+NOT: !exp
+
+Orden de Precedencia (o Prcedencia de Operadores):
+--------------------------------------------------
+Es un conjunto de reglas que determina el orden en que se evalúan los operadores en una expresión.
+Cuando una expresión tiene múltiples operadores, la precedencia define cuál se ejecuta primero.
+
+Ejemplo:
+()
+++
+--
+!
+**
+*
+/
+%
++
+-
+<, <=, >, >=, in (Los operadores mas a la izq se evaluan primero)
+==, !=, ===, !== (Los operadores mas a la izq se evaluan primero)
+??
+?:
+
+Tabla de precedencia completa de JS: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Operator_precedence
+
+Operador Ternario:
+------------------
+
+let salida = edad > 20 ? "sombrero" : "bolsa juguetes";
+
+let logging = email && password;
+
+jsonSalida = {
+	"logging" : logging,
+	".." : "...";
+}
+
+
+let salida
+
+if (edad > 20) {
+   salida = "sombrero"
+}
+else {
+   salida = "bolsa juguetes"
+}
+
+Valores vacios:
+----------------
+null 
+undefined
+
+Enlaces (Declaracion y asignacion de variables):
+------------------------------------------------
+
+let variable = 0; // local al ambito 
+var x = 10; // global siempre
+
+Corto circuito:
+---------------
+
+Es un comportamiento que ocurre en ciertos operadores lógicos donde la evaluación de una expresión se detiene tan pronto como se determina el resultado final, sin necesidad de evaluar todas las partes de la expresión. 
+
+AND: Ubicar a la izq. lo que tiene mas chance de ser Falso
+	if (exp1 && exp2 && ...) {...}
+
+OR: A la izq. lo que tiene mas chances de ser Verdadero
+	if (exp1 || exp2 || ...) {...}
+
+El cortocircuito es una característica útil en programación que optimiza y protege el código al evitar evaluaciones innecesarias.
+
+Operador ?? (Nullish Coalesing):
+---------------------------------
+Devuelve el primer operador si el primer operando no es null o undefined, de lo contrario devuelve el segundo operando.
+Util para manejar valores nulos o indefinidos
+
+expresion1 ?? expresion2
+
+console.log( null ?? "Hola");
+
+----------
+Ejercicio:
+----------
+Crear un script (o en la pagina web) que le pida al usuario 2 numeros, luego que seleccione la operacion y finalmente el programa muestre el resultado.
+
+Ejemplo:
+
+Mensaje: "Ingrese el numero 1: "
+> 1
+Mensaje: "Ingrese el numero 2: "
+> 7
+Mensaje: "Seleccione la operación: "
+> 1
+Mensaje: "La suma es:  8"
+"Gracias por usar la aplicación"
