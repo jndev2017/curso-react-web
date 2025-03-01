@@ -99,6 +99,7 @@ Enlaces (Declaracion y asignacion de variables):
 
 let variable = 0; // local al ambito 
 var x = 10; // global siempre
+const x = 3.14; // Similar al let pero su valor no puede modificarse a lo largo del programa
 
 Corto circuito:
 ---------------
