@@ -2,7 +2,7 @@
 
 Este ejemplo tiene como objetivo mostrar el uso de la funcion flecha dentro del bucle principal de animación, para acceder al contexto global dentro de un callback (funcion animate()).
 
-> El ejemplo se encuentra en las líneas 66-80.
+> El ejemplo se encuentra en las líneas 66-80
 
 ## Instalacion del ejemplo
 
