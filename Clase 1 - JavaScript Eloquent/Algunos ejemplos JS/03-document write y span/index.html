@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Ejemplo document write</title>
+
+</head>
+<body>
+	<h2>Ejemplo 2 - Función <em>prompt</em></h2>
+	<h3>
+		Palabra ingresada: <em><span id="response"></span></em>
+	</h3>
+</body>
+	<script>
+		let response = prompt("Hola, bienvenido a la clase!!");
+		document.getElementById("response").textContent = response;
+		
+	</script>
+</html>
