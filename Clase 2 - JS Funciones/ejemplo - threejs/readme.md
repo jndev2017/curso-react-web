@@ -16,3 +16,4 @@ Y abrir el navegador en la dirección localhost:5173 o la que aparezca indicada
 ## Requerimientos
 
 * Node v18 o superior (que sea compatible con three.js)
+* Algunos conocimientos de OOP para entender la organización del código
