@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejemplo Ambito anidado</title>
+</head>
+<body>
+	
+</body>
+<script>
+	
+	let x = 0; // global
+
+	//{
+		//var x = 10; // error
+	//}
+
+	var funcion1 = function() {
+
+		let x = 100; // local a funcion1
+
+	    console.log("->1");    
+
+	    var funcion2 = function() {
+	    	console.log("->2");    
+		}
+	}
+
+	console.log(x);
+
+</script>
+</html>

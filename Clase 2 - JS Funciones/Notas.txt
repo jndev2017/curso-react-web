@@ -1,0 +1,50 @@
+
+----------------------------------------
+
+// FUNCIONES ANIDADAS
+
+let x = 10; // ambito global
+
+function nombreFuncion1() {
+	let y = 1; // ambito local a nombreFuncion1
+	let x = 100; // ambito local a nombreFuncion1
+
+	function nombreFuncion2() {
+		let y = 1; // ambito local a nombreFuncion2
+		let x = 100; // ambito local a nombreFuncion2
+	}
+}
+
+// FUNCIONES FLECHA
+const square = (x) => { return x * x}
+const square = x => x * x;
+
+const hacAlgo = (x, y) => {
+   let result = x * y;
+   return result % 2 == 0 ? "par" : "impar";
+}
+
+--------------------------------------
+
+// ARGUMENTOS OPCIONALES
+
+const funcion3(x, y = 20, z = 100) {
+
+	return x * y * z;
+}
+
+funcion3(10); // 10 * 20 * 100 = 20000
+
+---------------------------------------
+
+- Expresiones Lambda (o funciones auxiliares/lambda):
+
+https://wiki.uqbar.org/wiki/articles/expresiones-lambda.html
+
+- Expresiones Lambda en C++:
+
+https://learn.microsoft.com/es-es/cpp/cpp/lambda-expressions-in-cpp?view=msvc-170
+
+- Pila de llamadas en JS:
+
+https://developer.mozilla.org/es/docs/Glossary/Call_stack

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+	
+	<script>
+
+		class Contenedor {
+			constructor() {
+				console.log("soy un objeto de la clase Contenedor")
+				
+				window.onresize = function() {
+					console.log("contenedor 1: ")
+				    console.log(this)
+				};
+
+				window.onresize = () => {
+					console.log("contenedor 2: ")
+				    console.log(this)
+				};
+			}
+
+		let cont1 = new Contenedor();
+
+		class Viewer {
+			constructor () {
+				this.cube = ...;
+				this.renderer = ...;
+			}
+
+			function animate() {
+				this.cube.rotation.x += 0.01;
+				this.cube.rotation.y += 0.01;
+
+				this.renderer.render( scene, camera );
+			}
+
+			function render() {
+				this.renderer.setAnimationLoop(
+					() => {
+						this.animate(); // funcionaaaaa!!!
+					});
+				};
+			}
+
+		
+	</script>
+
+</html>
