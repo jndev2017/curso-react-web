@@ -1,0 +1,13 @@
+delete <unObjeto.clave> -> Eliminar una clave/atributo de <unObjeto>
+Object.keys(<unObjeto>) -> Obtiene las claves de <unObjeto>
+typeof <unObjeto> -> retorna el tipo de <unObjeto>
+"<atributo>"  in <unObjeto> -> Comprueba si "<atributo>" está en un <unObjeto>
+
+Ejemplos:
+
+delete juan.profesion // elimina el atributo profesion del objeto juan
+Object.keys(juan) // Retorna una lista con los nombres de las claves del objeto juan
+Object.assign(juan, { profesion: "deportista" }); // Une el objeto juan con el objeto {profesion: "deportista"}
+typeof juan // Retorna 'object'
+JSON.stringify(juan) // Retorna la versión string del objeto juan (formato JSON)
+

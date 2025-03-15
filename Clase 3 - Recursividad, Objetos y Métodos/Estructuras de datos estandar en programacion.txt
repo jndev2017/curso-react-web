@@ -1,0 +1,6 @@
+Pila: primero en entrar es el ultimo en salir
+Cola: ultimo en entrar ultimo en salir
+Lista: insertar en cualquier lugar, eliminar de cualquier lugar
+
+Arbol: formado por raiz y hojas
+Grafos: conecta nodos
