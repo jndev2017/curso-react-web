@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Funciones de orden superior</title>
+</head>
+<body>
+	
+</body>
+
+<script>
+	/*
+		1. map():
+		Mapea una lista (convierte) en otra, aplicandole una función.
+		No modifica la lista original, devuelve una nueva.
+	*/
+
+	const numbers = [1, 2, 3, 4];
+	const doubled = numbers.map(num => num * 2);
+
+	console.log(doubled); // [2, 4, 6, 8]
+
+	/*
+		2. filter():
+
+		Filtra los elementos de una lista que cumplan una condición.
+	*/
+
+	const numbers = [1, 2, 3, 4, 5, 6];
+	const evens = numbers.filter(num => num % 2 === 0);
+
+	console.log(evens); // [2, 4, 6]
+
+	/*
+		3. reduce():
+
+		Reduce una lista a un solo valor usando una función acumuladora.
+	*/
+
+	const numbers = [1, 2, 3, 4];
+	const sum = numbers.reduce((acc, num) => acc + num, 0);
+
+	console.log(sum); // 10
+
+	/*
+		4. forEach():
+
+		Ejecuta una función para cada elemento de la lista
+	*/
+
+	const numbers = [1, 2, 3, 4];
+	numbers.forEach(num => console.log(num * 2));
+	// Output:
+	// 2
+	// 4
+	// 6
+	// 8
+
+	/*
+		5. find():
+
+		Devuelve el primer elemento que cumple una condición.
+		Si no encuentra ningún valor, devuelve undefined.
+	*/
+
+	const numbers = [10, 20, 30, 40];
+	const result = numbers.find(num => num > 15);
+
+	console.log(result); // 20
+
+	/*
+		6. findIndex():
+
+		Devuelve el índice del primer elemento que cumple una condición.
+		Si no encuentra ningún valor, devuelve -1.
+	*/
+
+	const numbers = [10, 20, 30, 40];
+	const index = numbers.findIndex(num => num > 15);
+
+	console.log(index); // 1
+
+	/*
+		7. some():
+
+		Devuelve true si al menos un elemento cumple una condición.
+	*/
+
+	const numbers = [1, 2, 3, 4];
+	const hasEven = numbers.some(num => num % 2 === 0);
+
+	console.log(hasEven); // true
+
+	/*
+		8. every():
+
+		Devuelve true si todos los elementos cumplen una condición.
+		Si algún valor no cumple la condición, devuelve false.
+	*/
+
+	const numbers = [2, 4, 6, 8];
+	const allEven = numbers.every(num => num % 2 === 0);
+
+	console.log(allEven); // true
+
+	/*
+		9. sort():
+
+		Ordena los elementos de un array (modifica el array original)
+	*/
+
+	const numbers = [4, 2, 3, 1];
+	numbers.sort((a, b) => a - b);
+
+	console.log(numbers); // [1, 2, 3, 4]
+
+	/****************************
+		Ejemplos avanzados:
+	*****************************/
+
+	/*
+		1) Composición de funciones:		
+
+		La composición permite encadenar varias funciones pequeñas para construir una función más compleja.
+	*/
+
+	const add5 = x => x + 5;
+	const multiplyBy2 = x => x * 2;
+
+	const compose = (f, g) => x => f(g(x));
+
+	const composed = compose(add5, multiplyBy2);
+
+	// f(g(3));
+	// add5( multiplyBy2(3) ) => 11
+	console.log(composed(3)); // 11
+
+	/*
+		2) Callback y programación asincrónica
+	*/
+
+	const fetchData = (url, callback) => {
+	  setTimeout(() => {
+	    callback(`Data from ${url}`);
+	  }, 1000);
+	};
+
+	fetchData('https://api.com', data => console.log(data));
+</script>
+
+</html>

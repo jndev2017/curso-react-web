@@ -1,0 +1,12 @@
+
+map
+filter
+reduce
+
+find
+findIndex
+
+forEach
+
+any / some
+all / every
