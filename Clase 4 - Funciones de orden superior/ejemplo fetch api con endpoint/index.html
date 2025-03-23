@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejemplo fetch API</title>
+</head>
+<body>
+	<h1>
+		Consumo de API con fetch (PokeAPI)
+	</h1>
+
+	<h3>Información del Pokemon seleccionado:</h3>
+
+	<ul>
+		<li>
+			<b>
+				Nombre: 
+			</b>
+			<span id="pokemonName" style="text-transform: capitalize;">
+				
+			</span>
+		</li>
+		<li>
+			<b>
+				Tipos:
+			</b>
+			<ul id="pokemonTypes" style="text-transform: capitalize;">
+				
+			</ul>
+		</li>
+		<li>
+			<b>
+				Habilidades:
+			</b>
+			<ul id = "pokemonAbilities" style="text-transform: capitalize;">
+				<li>
+					Saltar
+				</li>
+				<li>
+					Volar
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<h3>Official Artwork:</h3>
+	<img id="pokemonImage" src="" alt="">
+</body>
+<script>
+
+	const getPokemon = async (name) => {
+	  try {
+	  	// Hace un fetch a la API para obtener la información de un pokemon
+	    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+	    const data = await response.json();	    
+
+	    // Informa el nombre
+	    document.getElementById("pokemonName").innerHTML = data.name;
+
+	    // Informa los tipos
+	    let typesHTML = data.types
+	    	.map(t => `<li>${t.type.name}</li>`)
+	    	.join("");
+		document.getElementById("pokemonTypes").innerHTML = typesHTML;
+
+	    // Informa las habilidades
+	    let abilitiesHTML = data.abilities
+	    	.map(a => `<li>${a.ability.name}</li>`)
+	    	.join("");
+		document.getElementById("pokemonAbilities").innerHTML = abilitiesHTML;
+
+	    // Imagen del pokemon
+	    let imageSrc = data.sprites.other["official-artwork"].front_default
+	    document.getElementById("pokemonImage").src = imageSrc;
+
+	  } catch (error) {
+	    console.error(error);
+	  }
+	};
+
+	// Selecciona el pokemon para obtener la información
+	getPokemon('charizard');
+
+
+</script>
+</html>
