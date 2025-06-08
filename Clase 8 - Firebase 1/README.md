@@ -1,12 +1,30 @@
-# React + Vite
+# Firebase - Ejemplo 1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este ejemplo configura React y Firebase para ejecutarlo en modo desarrollo y usa servicios como:
 
-Currently, two official plugins are available:
+* Google Authentication
+* Firestore
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Temas que se cubren
+* React hooks
+* Firebase
+* Google Authentication
+* Firestore
 
-## Expanding the ESLint configuration
+## Ejecutar del proyecto
+Para ejecutar el proyecto, debes seguir los siguientes pasos:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Actualiza el objeto de configuración de Firebase con la información de tu proyecto
+```
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  ...
+};
+```
+2. Instalar dependencias:
+```npm install```
+
+3. Ejecutar en modo local:
+```npm run dev```
