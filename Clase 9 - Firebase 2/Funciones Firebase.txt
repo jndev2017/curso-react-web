@@ -1,0 +1,14 @@
+addDoc(collection(<db>, <collection-name>), {<document>}) ---> agrega un documento a una coleccion
+setDoc(collection(<db>, <collection-name>, <id-document>), {<document>}) ----> Agrega/Actualiza un documento de una coleccion
+
+getDocs() ----> Obtiene todos los documentos de una colección
+doc(), getDoc() ----> Obtiene un documento a partir de un ID
+
+doc(), updateDoc()---->  Obtiene un documento a partir de un ID, actualiza su contenido
+
+deleteDoc() ---> Elimina un documento a partir de un ID
+
+// CONSULTAS
+query()
+
+where("nombre", "==", 2isd23123)
